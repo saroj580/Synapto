@@ -1,4 +1,10 @@
-import type { CalendarEvent, DayStats, FreeBlock, InsightStat, Message } from "@/types";
+import type {
+  CalendarEvent,
+  DayStats,
+  FreeBlock,
+  InsightStat,
+  Message,
+} from "@/types";
 import { generateId } from "./utils";
 
 // ─── Mock Calendar Events ──────────────────────────────────────────
@@ -77,18 +83,74 @@ export const TODAY_EVENTS: CalendarEvent[] = [
 ];
 
 export const WEEK_DAYS: DayStats[] = [
-  { label: "Monday", shortLabel: "Mon", date: 9, meetingCount: 2, hours: 2.5, isToday: false },
-  { label: "Tuesday", shortLabel: "Tue", date: 10, meetingCount: 3, hours: 3.5, isToday: false },
-  { label: "Wednesday", shortLabel: "Wed", date: 11, meetingCount: 3, hours: 3.0, isToday: true },
-  { label: "Thursday", shortLabel: "Thu", date: 12, meetingCount: 4, hours: 5.5, isToday: false },
-  { label: "Friday", shortLabel: "Fri", date: 13, meetingCount: 1, hours: 1.0, isToday: false, isFree: true },
+  {
+    label: "Monday",
+    shortLabel: "Mon",
+    date: 9,
+    meetingCount: 2,
+    hours: 2.5,
+    isToday: false,
+  },
+  {
+    label: "Tuesday",
+    shortLabel: "Tue",
+    date: 10,
+    meetingCount: 3,
+    hours: 3.5,
+    isToday: false,
+  },
+  {
+    label: "Wednesday",
+    shortLabel: "Wed",
+    date: 11,
+    meetingCount: 3,
+    hours: 3.0,
+    isToday: true,
+  },
+  {
+    label: "Thursday",
+    shortLabel: "Thu",
+    date: 12,
+    meetingCount: 4,
+    hours: 5.5,
+    isToday: false,
+  },
+  {
+    label: "Friday",
+    shortLabel: "Fri",
+    date: 13,
+    meetingCount: 1,
+    hours: 1.0,
+    isToday: false,
+    isFree: true,
+  },
 ];
 
 export const INSIGHT_STATS: InsightStat[] = [
-  { icon: "📅", value: "14", label: "Meetings this week", change: "↑ 2 from last week" },
-  { icon: "⏱", value: "18h", label: "Total meeting time", change: "36% of your workweek" },
-  { icon: "🔥", value: "Thu", label: "Busiest day", change: "4 meetings · 5.5 hrs" },
-  { icon: "🌿", value: "6h", label: "Free time tomorrow", change: "Best focus window: Fri PM" },
+  {
+    icon: "📅",
+    value: "14",
+    label: "Meetings this week",
+    change: "↑ 2 from last week",
+  },
+  {
+    icon: "⏱",
+    value: "18h",
+    label: "Total meeting time",
+    change: "36% of your workweek",
+  },
+  {
+    icon: "🔥",
+    value: "Thu",
+    label: "Busiest day",
+    change: "4 meetings · 5.5 hrs",
+  },
+  {
+    icon: "🌿",
+    value: "6h",
+    label: "Free time tomorrow",
+    change: "Best focus window: Fri PM",
+  },
 ];
 
 // ─── Initial greeting messages ─────────────────────────────────────
@@ -214,7 +276,7 @@ export function getAIResponse(input: string): AIResponse {
 
   return {
     content:
-      "I've checked your calendar. Could you be more specific? Try asking things like <em>\"What meetings do I have tomorrow?\"</em> or <em>\"Am I free Friday afternoon?\"</em> ✦",
+      'I\'ve checked your calendar. Could you be more specific? Try asking things like <em>"What meetings do I have tomorrow?"</em> or <em>"Am I free Friday afternoon?"</em> ✦',
   };
 }
 

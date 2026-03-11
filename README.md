@@ -20,13 +20,13 @@ Open [http://localhost:3000](http://localhost:3000)
 
 ## Tech Stack
 
-| Layer       | Choice                                       |
-|-------------|----------------------------------------------|
-| Framework   | Next.js 14 (App Router)                      |
-| Language    | TypeScript (strict mode)                     |
-| Styling     | Tailwind CSS v3 + custom design tokens       |
-| Icons       | Lucide React                                 |
-| Fonts       | DM Sans · Playfair Display · DM Mono (Google)|
+| Layer     | Choice                                        |
+| --------- | --------------------------------------------- |
+| Framework | Next.js 14 (App Router)                       |
+| Language  | TypeScript (strict mode)                      |
+| Styling   | Tailwind CSS v3 + custom design tokens        |
+| Icons     | Lucide React                                  |
+| Fonts     | DM Sans · Playfair Display · DM Mono (Google) |
 
 ---
 
@@ -96,35 +96,33 @@ Dashboard
 
 The `getAIResponse()` function in `src/lib/data.ts` handles these query patterns:
 
-| Query Pattern               | Response                          |
-|-----------------------------|-----------------------------------|
-| "meetings today"            | Today's 3 events as cards         |
-| "meetings tomorrow"         | Tomorrow's 4 events as cards      |
-| "next meeting"              | Closest upcoming meeting          |
-| "free friday / available"   | Free time block card              |
-| "week / overview"           | Weekly summary stats              |
-| "busiest"                   | Busiest day analysis              |
-| Anything else               | Friendly fallback prompt          |
+| Query Pattern             | Response                     |
+| ------------------------- | ---------------------------- |
+| "meetings today"          | Today's 3 events as cards    |
+| "meetings tomorrow"       | Tomorrow's 4 events as cards |
+| "next meeting"            | Closest upcoming meeting     |
+| "free friday / available" | Free time block card         |
+| "week / overview"         | Weekly summary stats         |
+| "busiest"                 | Busiest day analysis         |
+| Anything else             | Friendly fallback prompt     |
 
 ---
 
 ## Design System
 
 ### Colors (CSS variables)
+
 ```css
---bg-deep:       #0a0d14    /* Page background */
---bg-mid:        #0f1320    /* Sidebar */
---bg-card:       rgba(255,255,255,0.04)  /* Cards */
---indigo:        #6366f1    /* Primary accent */
---indigo-light:  #818cf8    /* Active states */
---teal:          #2dd4bf    /* Positive / free time */
---amber:         #fbbf24    /* External / warnings */
---text-primary:  #f0f2f8
---text-secondary: #8b92a8
---text-muted:    #525a70
+--bg-deep: #0a0d14 /* Page background */ --bg-mid: #0f1320 /* Sidebar */
+  --bg-card: rgba(255, 255, 255, 0.04) /* Cards */ --indigo: #6366f1
+  /* Primary accent */ --indigo-light: #818cf8 /* Active states */
+  --teal: #2dd4bf /* Positive / free time */ --amber: #fbbf24
+  /* External / warnings */ --text-primary: #f0f2f8 --text-secondary: #8b92a8
+  --text-muted: #525a70;
 ```
 
 ### Typography
+
 - **Display**: Playfair Display (headings, logo)
 - **Body**: DM Sans (UI text, buttons)
 - **Mono**: DM Mono (timestamps, code chips)
@@ -147,6 +145,7 @@ const handleConnect = () => {
 ```
 
 Add to `next.config.js`:
+
 ```js
 // Configure NextAuth with Google provider
 // Set GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET in .env.local
